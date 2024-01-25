@@ -11,12 +11,12 @@ datasource db {
 }
 
 model product {
-    id           Int            @id @default(autoincrement())
-    name         String
-    price        Float
-    quantity     Int
-    StockInput   StockInput[]
-    StockOutpout StockOutpout[]
+    id          Int           @id @default(autoincrement())
+    name        String
+    price       Float
+    quantity    Int
+    StockInput  StockInput[]
+    StockOutput StockOutput[]
 }
 
 model StockInput {
@@ -27,7 +27,7 @@ model StockInput {
     product   product  @relation(fields: [productId], references: [id])
 }
 
-model StockOutpout {
+model StockOutput {
     id        Int      @id @default(autoincrement())
     productId Int
     quantity  Int

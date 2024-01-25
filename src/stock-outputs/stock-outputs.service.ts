@@ -54,7 +54,7 @@ export class StockOutputsService {
     } catch (error) {
       console.error(error);
       if (error.code === 'P2025') {
-        throw new NotFoundError(`Stock Input with ID ${id} not found`);
+        throw new NotFoundError(`Stock output with ID ${id} not found`);
       }
       throw error;
     }
